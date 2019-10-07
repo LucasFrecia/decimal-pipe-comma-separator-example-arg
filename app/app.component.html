@@ -1,0 +1,13 @@
+<div>
+	<p> {{num1 | numberFormat}} </p>
+  <p> {{num3 | numberFormat}} </p>  
+	<p> {{num1 | number:'3.2-5' | numberFormat}} </p>
+	<p> {{num2 | number:'3.2-5' | numberFormat}} </p>
+	<p> {{num1 * num2 | number:'1.3-6' | numberFormat}} </p>
+</div>
+
+<div>
+  <input type="number" [(ngModel)]="userNum"> 
+  <button (click)="formatUserNumber()" > Format user input </button>
+  <p>{{ userNum }}</p>
+</div>
