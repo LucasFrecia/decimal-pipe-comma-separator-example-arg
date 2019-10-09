@@ -14,10 +14,13 @@ export class AppComponent {
 
   userNum: number;
 
-  constructor(private format: NumberFormatPipe) {}
+  constructor(private formatPipe: NumberFormatPipe) {}
 
+  /**
+   * formatUserNumber is an example by injecting our pipe and using its transform method
+   */
   formatUserNumber() {
-    this.userNum = this.format.transform(this.userNum);
+    this.userNum = this.formatPipe.transform(this.userNum);
   }
 
 }
